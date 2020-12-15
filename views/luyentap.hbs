@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">    
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    
+    <title>{{title}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+-->
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/clock.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.flowplayer.com/releases/native/stable/style/flowplayer.css">
+    <script src="vendor/jquery/jquery.min.js"></script>
+  </head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+        <div id="main">
+          <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+              <div class="logo">
+                <a href="/">Gym Minh Hậu</a>
+              </div>
+            </header>
+
+            
+            
+            <!-- Tables -->
+         
+          <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              
+              <select name="sec" id="sec" class="form-control" style="margin-left: 80px; text-align:center; margin-bottom:20px;">
+                <option value="59">60</option>
+                <option value="55">55</option>
+                <option value="50" >50</option>
+                <option value="45">45</option>
+                <option value="40" >40</option>
+                <option value="35">35</option>
+                <option value="30" >30</option>
+                <option value="25">25</option>
+                <option value="20">20</option>
+              </select>
+            </div>
+              <div class="col-md-3">
+              <select name="res" id="res" class="form-control" style="margin-left: 120px; text-align:center;">
+                <option value="20" >20</option>
+                <option value="15" >15</option>
+                <option value="10">10</option>
+              </select>
+              
+            </div>
+            <div class="col-md-3" >
+              <select name="setinput" id="setinput" class="form-control" style="margin-left: 180px;text-align:center;">
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              
+            </div>
+            
+         </div>
+            <div class="container-fluid">
+            <div class="count">
+                   <div class="countd">
+                     <span class="seconds" name="seconds" id="seconds">00</span>
+                     SECONDS
+                   </div>
+                 <div class="countd">
+                     <span class="seconds" name="rest" id="rest">00</span>
+                     REST
+                   </div>
+                 
+                   <div class="countd">
+                     <span class="seconds" name="set" id="set">00</span>
+                     SET
+                   </div>
+                 </div>
+                 <button class="btn btn-danger" onclick="myStopFunction()">Stop time</button>
+                <button class="btn btn-primary" onclick="myStartFunction()">Start time</button>
+                <a href="/luyentap"><button class="btn btn-warning"  >Replay time</button></a>
+                
+                 </div>
+                 
+
+                 <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Danh sách bài tập</h2>
+          </div>
+          
+          <div class="default-table">
+            <table>
+              <thead>
+               
+                  <tr>
+                     <th style="text-align: center;" name="thư" id="thu">Thứ hai</th>
+                     
+                </tr>
+                
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <input type="hidden" id="dem" name="dem" value="{{count}}">
+                   <td style="text-align: center;" >
+                  {{#each result}}
+
+                  <div class="row" > <div class="card" id="baitap">
+                        
+                       <iframe width="320" height="240" src="{{link}}" frameborder="0" allow=" autoplay;" ></iframe>
+                          <hr>
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col-md-10">
+                                      <h5 class="card-title productName">{{tenbaitap}}
+                                      </h5>
+                                     <!--  <h5 class="card-title productName">SET: {{solan}}
+                                      </h5>
+                                      <h5 class="card-title productName">TIME: {{thoigiantap}}
+                                      </h5> -->
+                                     
+                                    <div class="form-group row">
+    
+    
+                                  <div class="form-check">
+                                    <input class="checkbox" type="checkbox" id="{{id}}">
+                                    <label class="form-check-label" for="{{id}}">
+                                      <h5>Đã tập</h5>
+                                    </label>
+                                  </div>
+    
+                                    
+                                  </div>
+                                      
+                                  </div>
+                                  
+                              </div>
+  
+                              
+                
+                          </div>
+                          
+                      </div>
+                      
+                  </div>
+                    
+                  {{/each}}
+                   </td>
+                   
+                   
+                </tr>
+                
+                
+          </div>
+          <div class="alternate-table">
+            <table>
+              
+              
+            </table>
+            
+          </div>
+          </tbody>
+         
+        </div>
+      </div>
+            </div> 
+            
+                <script type="text/javascript">
+        //This is done to make the following JavaScript code compatible to XHTML. <![CDATA[
+              
+              
+              
+              var thu = ["Chủ nhật","Thứ hai","Thứ ba","Thứ tư","Thứ năm","Thứ sáu","Thứ bảy"];
+              current_date = new Date()
+              cday = current_date.getUTCDay()
+              document.getElementById("thu").innerHTML=thu[cday];
+              
+              //]]>
+            </script>
+            
+           <script type="text/javascript">
+              const thoigiantap = document.getElementById("thoigiantap");
+              const solan = document.getElementById("set");
+              let time;
+              let rest;
+              let set;
+             
+              $("#sec").click(function(){
+                  const sec = document.getElementById("sec");
+                  console.log(sec.options[sec.selectedIndex].value);
+                  time = sec.options[sec.selectedIndex].value;
+              });
+              const sec = document.getElementById("sec");
+                  console.log(sec.options[sec.selectedIndex].value);
+                  time = sec.options[sec.selectedIndex].value;
+               $("#res").click(function(){
+                  const res = document.getElementById("res");
+                 
+                  rest = res.options[res.selectedIndex].value;
+              });
+              const res = document.getElementById("res");
+                 
+                  rest = res.options[res.selectedIndex].value;
+               $("#setinput").click(function(){
+                   const setinput = document.getElementById("setinput");
+                   set = setinput.options[setinput.selectedIndex].value;
+                   solan.innerHTML =set;
+              });
+              const setinput = document.getElementById("setinput");
+                   set = setinput.options[setinput.selectedIndex].value; 
+             solan.innerHTML =set;
+             
+            
+              
+                const countdown =document.getElementById("seconds");
+                const countdownrest =document.getElementById("rest");
+                
+                
+                var my ;
+                  function myStopFunction() {
+                  clearInterval(my);
+                  
+                  }
+                  function myStartFunction() {
+                    my = setInterval(updatecountdown,1100);
+                    
+                  }
+                  
+                  
+                  
+                  function updatecountdown(){
+                  let second = time%60;
+                  let rest2 = rest%60;
+                  
+                 
+                    if(second==0){
+                          countdown.innerHTML="00";
+                        if(rest2==0){
+                          countdownrest.innerHTML="00";
+
+                          if(set==0){
+                              solan.innerHTML ="00";
+                              time=sec.options[sec.selectedIndex].value;
+                              rest=res.options[res.selectedIndex].value;
+                              set = setinput.options[setinput.selectedIndex].value;
+                            }else{
+                             time=sec.options[sec.selectedIndex].value;
+                              rest=res.options[res.selectedIndex].value;
+                              
+                                
+                                  set--;
+                                  solan.innerHTML=`${set}`;
+                                  
+                               
+                            }
+                        }else{
+                          countdownrest.innerHTML=`${rest2}`;
+                          rest--;
+                        }
+                      }else{
+                        countdown.innerHTML = `${second}`;
+                        time--;
+                 }
+                
+                }
+                
+            
+           </script>
+             
+           
+
+          </div>
+          
+        </div>
+
+     <!-- Sidebar -->
+        <div id="sidebar">
+
+          <div class="inner">
+
+            <!-- Search Box -->
+            <section id="search" class="alt">
+              <form method="get" action="#">
+                <input type="text" name="search" id="search" placeholder="Search..." />
+              </form>
+            </section>
+              
+            <!-- Menu -->
+           <nav id="menu">
+              <ul>
+                <li><a href="/">Trang chủ</a></li>
+               <li><a href="/dsbt">Danh sách bài tập</a></li>
+                <li><a href="/lichtap">Lịch tập</a></li>
+                 <li><a href="/thembt">Thêm bài tập</a></li>
+              </ul>
+            </nav>
+
+            <!-- Featured Posts -->
+            <div class="featured-posts">
+              <div class="heading">
+                <h2>Hình ảnh</h2>
+              </div>
+              <div class="owl-carousel owl-theme">
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="https://live.staticflickr.com/65535/50670120183_4030b7eab1_z.jpg" alt="featured one">
+                    <p>Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="https://live.staticflickr.com/65535/50670946437_9ca7ca3bd6_z.jpg" alt="featured two">
+                    <p>The work an unknown good man has done is like a vein of water flowing hidden underground, secretly making the ground green </p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="https://live.staticflickr.com/65535/50670945872_b131ae01c7_z.jpg" alt="featured three">
+                    <p>You have to put in many, many, many tiny efforts that nobody sees or appreciates before you achieve anything worthwhile</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            
+            
+          </div>
+        </div>
+
+    </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//cdn.flowplayer.com/releases/native/edge/flowplayer.min.js"></script>
+<script 
+  src="//cdn.flowplayer.com/releases/native/edge/plugins/hls.min.js"></script>
+<script 
+  src="//cdn.flowplayer.com/releases/native/edge/plugins/asel.min.js"></script>
+<script src="//cdn.flowplayer.com/releases/native/edge/plugins/playlist.min.js"></script>
+
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    
+    
+</body>
+
+
+  </body>
+
+</html>

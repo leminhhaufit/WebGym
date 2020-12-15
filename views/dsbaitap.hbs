@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">    
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Gym for life {{title}}</title>
+
+    <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+        <div id="main">
+          <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+              <div class="logo">
+                <a href="/">Gym Minh Hậu</a>
+              </div>
+            </header>
+
+            
+            
+            <!-- Tables -->
+            <section class="tables">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="section-heading">
+                      <h2>Danh sách bài tập</h2>
+                    </div>
+                    <div class="default-table">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Tên bài tập</th>
+                            <th>Thời gian tập</th>
+                            <th>Số lần thực hiện</th>
+                            <th>Link</th>
+                            <th>Thứ</th>
+                            <th>Action</th>
+                          </tr>
+                          {{#each result}}
+                          <form method="get" action="/themlich">
+                            <tr>
+                            <td >{{id}}</td>
+                            <td >{{tenbaitap}}</td>
+                            <td >{{thoigiantap}}</td>
+                            <td >{{solan}}</td>
+                            <td >  <iframe width="320" height="240" src="{{link}}" frameborder="0" allow=" autoplay;" ></iframe></td>
+                            <td>
+                              <select class="form-control" name="thu">
+                                <option value="Thứ hai">Thứ hai</option>
+                                <option value="Thứ ba">Thứ ba</option>
+                                <option value="Thứ tư">Thứ tư</option>
+                                <option value="Thứ năm">Thứ năm</option>
+                                <option value="Thứ sáu">Thứ sáu</option>
+                                <option value="Thứ bảy">Thứ bảy</option>
+                                <option value="Chủ nhật">Chủ nhật</option>
+                              </select>
+                              </td>
+                              <input type="hidden" name="id" value="{{id}}">
+                              <input type="hidden" name="tentk" value="vuongngocai">
+                            <td><button type="submit" id="form-submit" class="button">Thêm vào lịch tập</button></td>
+                          </tr>
+                          </form>
+                        {{/each}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{tenbaitap}}</td>
+                            <td>{{thoigiantap}}</td>
+                            <td>{{solan}}</td>
+                            <td><iframe width="320" height="240" src="{{link}}" frameborder="0" allow=" autoplay;" ></iframe></td>
+                            <td><button type="submit" id="form-submit" class="button">Thêm vào lịch tập</button></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          
+                    </div>
+                    <div class="alternate-table">
+                      <table>
+                        
+                      </table>
+                      
+                    </div>
+                    </tbody>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+           
+              
+           
+
+          </div>
+        </div>
+
+      <!-- Sidebar -->
+        <div id="sidebar">
+
+          <div class="inner">
+
+            <!-- Search Box -->
+            
+              <section id="search" class="alt">
+              <form method="get" action="/tim">
+                <input type="text" name="id" id="search" placeholder="Search..." />
+              
+            </section>
+            </form>
+              
+            <!-- Menu -->
+           <nav id="menu">
+              <ul>
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/dsbt">Danh sách bài tập</a></li>
+                <li><a href="/lichtap">Lịch tập</a></li>
+                <li><a href="/thembt">Thêm bài tập</a></li>
+              </ul>
+            </nav>
+
+            <!-- Featured Posts -->
+            <div class="featured-posts">
+              <div class="heading">
+                <h2>Hình ảnh</h2>
+              </div>
+              <div class="owl-carousel owl-theme">
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="https://live.staticflickr.com/65535/50670120183_4030b7eab1_z.jpg" alt="featured one">
+                    <p>Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="https://live.staticflickr.com/65535/50670946437_9ca7ca3bd6_z.jpg" alt="featured two">
+                    <p>The work an unknown good man has done is like a vein of water flowing hidden underground, secretly making the ground green </p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="https://live.staticflickr.com/65535/50670945872_b131ae01c7_z.jpg" alt="featured three">
+                    <p>You have to put in many, many, many tiny efforts that nobody sees or appreciates before you achieve anything worthwhile</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            
+            
+          </div>
+        </div>
+
+    </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    bottom: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+}
+
+.countd {
+    display: inline-block;
+    width: 280px;
+    height: 280px;
+    border: 4px solid;
+    margin: 0 30px;
+    font-size: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.countd span {
+    display: block;
+    font-size: 96px;
+    margin-top: 14px;
+}
+@import url('//cdn.flowplayer.com/releases/native/edge/style/flowplayer.css');
+  
+#player, #controls {
+  max-width: 40em;
+}
