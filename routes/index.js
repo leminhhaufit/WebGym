@@ -12,7 +12,7 @@ AWS.config.update({
 
 var dynamo = new AWS.DynamoDB();
 var docClient =  new AWS.DynamoDB.DocumentClient();
-router.get('/',function(req,res){
+router.get('/index',function(req,res){
   res.render('index',{title: "Gym for life Trang chủ"});
 
 })
@@ -20,7 +20,7 @@ router.get('/thembt',function(req,res){
   res.render('thembt',{title: "Gym for life Trang chủ"});
 
 })
-router.get('/login',function(req,res){
+router.get('/',function(req,res){
   res.render('login',{title: "Gym for life Đăng nhập"});
 
 })
