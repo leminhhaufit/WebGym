@@ -39,18 +39,23 @@ https://templatemo.com/tm-529-ramayana
             <header id="header">
               <div class="logo">
                 <a href="/index">Gym Minh Hậu</a>
-               
+              </div>
+             <div class="col">
+                  <div class="row-md-1">
+                      <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <div class="row-md-2"></div>
+                      <p id="nametk" style="color: aliceblue;">czczczcz</p>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" ><!--  <p id="emailtk" style="color: aliceblue;">xczcxz</p>-->
+                      <button class="btn btn-danger" onclick="mainApp.logOut()">Đăng xuất</button></a>
+                        
+                      </div>
+                  </div>
+                </div>
             </header>
-            <div class="row">
-              
-              <div class="col-md-2"> </div>
-               <div class="col-md-7">
-                 
-                 <p id="nametk">czczczcz</p>
-                <p id="emailtk">xczcxz</p></div>
-               <div class="col-md-3"><button class="btn btn-danger" onclick="mainApp.logOut()">Đăng xuất</button></div>
-
-             </div>
+           
             
             
             
@@ -74,6 +79,7 @@ https://templatemo.com/tm-529-ramayana
                             <th>Thứ</th>
                             <th>Action</th>
                           </tr>
+                          
                           {{#each result}}
                           <form method="get" action="/themlich">
                             <tr>
@@ -92,21 +98,18 @@ https://templatemo.com/tm-529-ramayana
                                 <option value="Thứ bảy">Thứ bảy</option>
                                 <option value="Chủ nhật">Chủ nhật</option>
                               </select>
+                              <input type="hidden" name="id"  value="{{id}}">
+                              <input type="hidden" name="tentk"  value="vuongngocai">
+                              <p type="text" name="tentk" id="emailtk"></p>
                               </td>
-                              <input type="hidden" name="id" value="{{id}}">
-                              <input type="hidden" name="tentk" value="vuongngocai">
+                              
+                               
                             <td><button type="submit" id="form-submit" class="button">Thêm vào lịch tập</button></td>
                           </tr>
                           </form>
                         {{/each}}
-                        <tr>
-                            <td>{{id}}</td>
-                            <td>{{tenbaitap}}</td>
-                            <td>{{thoigiantap}}</td>
-                            <td>{{solan}}</td>
-                            <td><iframe width="320" height="240" src="{{link}}" frameborder="0" allow=" autoplay;" ></iframe></td>
-                            <td><button type="submit" id="form-submit" class="button">Thêm vào lịch tập</button></td>
-                          </tr>
+                        
+                        
                         </thead>
                         <tbody>
                           
@@ -151,6 +154,7 @@ https://templatemo.com/tm-529-ramayana
                 <li><a href="/index">Trang chủ</a></li>
                 <li><a href="/dsbt">Danh sách bài tập</a></li>
                 <li><a href="/lichtap">Lịch tập</a></li>
+                <li><a href="/luyentap">Luyện tập</a></li>
                 <li><a href="/thembt">Thêm bài tập</a></li>
               </ul>
             </nav>
@@ -212,6 +216,8 @@ https://templatemo.com/tm-529-ramayana
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/transition.js"></script>

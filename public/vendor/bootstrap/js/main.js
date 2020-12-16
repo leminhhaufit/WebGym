@@ -12,8 +12,9 @@ var mainApp = {};
         console.log(user);
         
         nametk.innerText = user.displayName;
-        emailtk.innerText = user.email;
-        $('<img src='+user.photoURL+'>').appendTo('div.col-md-2');
+        //$('<input type="hidden" name="tentk" value='+user.email+'>').appendTo('div.id3');
+        emailtk.innerHTML = user.email;
+        $('<img style="width:50px;height:50px" src='+user.photoURL+'>').appendTo('div.row-md-2');
         
       } else {
         uid = null;

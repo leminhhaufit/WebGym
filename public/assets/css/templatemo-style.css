@@ -1095,9 +1095,7 @@ section.buttons .container-fluid {
 }
 
 @media screen and (max-width: 845px) {
-    #header .logo a {
-        margin-right: 30px!important;
-    }
+    
 	#main > .inner {
 	    padding: 15px;
 	}
